@@ -1,4 +1,4 @@
-"""
+
 
 # Example of loop
 
@@ -19,7 +19,7 @@ def filter_even(_num):
 num=[1,2,3,4,5,6,7,8,9]
 print(filter_even(num))
 
-"""
+
 
 # Check eligible to vote (Age > 22)
 
