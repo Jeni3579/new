@@ -17,7 +17,8 @@ def filter_even(_num):
 	return _num
 
 num=[1,2,3,4,5,6,7,8,9]
-print(filter_even(num))
+print(f"Unfiltered list= {num}")
+print(f"Filtered list = {filter_even(num)}")
 
 
 
