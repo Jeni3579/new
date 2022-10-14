@@ -28,3 +28,14 @@ if age > 22 :
     print (f"You can vote because you are of age {age}.")
 else:
     print ("You cannot vote because you don't reach the age to vote.")
+
+
+# Filter Odd number
+def odd_num(x):
+    return x % 2 == 1
+ 
+a= [2, 5, 7, 8, 10, 13, 16]
+ 
+result = filter(odd_num, a)
+print('Original List :', a)
+print('Filtered List :', list(result))
