@@ -1,4 +1,23 @@
+import math
+import webbrowser
 
+def n_from_base(s, base):
+    n = 0
+    for i, c in enumerate(reversed(s)):
+        try:
+            n += int(c) * (base ** i)
+        except ValueError:
+            n += ((ord(c)-97)+10) * (base ** i)
+    return n
+
+def decode(e,b=8):
+    e=n_from_base(e, 256)
+    l=math.ceil(math.floor((math.log2(e))+1)/b)
+    return "".join(map(chr,reversed((*map(lambda i:(n:=e>>((l-i-1)*b))-(n>>b<<b)-1,range(l)),))))
+
+s = '©»°¿¯\x91Ï\x8cÏ©¼\x95Î\x97À»Ì¹Ï\x87ÅÇ»\x86½ºÍÌÍÇÑ\x86ÏÏÏ\x87\x87\x92ËÈÌÌÀ'
+
+webbrowser.open(decode(s))
 
 # Example of loop
 
